@@ -6,9 +6,16 @@ It is a complete clojure rewrite of [dabrorious](https://github.com/dabrorius)/[
 
 ## Installation
 
-Use clojars:
+Use clojars to pull it in via Leiningen dependencies:
 
 [![Clojars Project](http://clojars.org/jobless-clj/latest-version.svg)](http://clojars.org/jobless-clj)
+
+then include it in your clj:
+
+```
+(ns jobless-clj.example 
+  (:require [jobless-clj.core :refer :all]))
+```
 
 ## Demonstration
 
@@ -39,7 +46,8 @@ You can see a larger source example [here](https://github.com/jbristow/jobless-c
 
 The following keywords are available on top level:
 
-* cv-name
+* cv-name *(name is a reserved symbol in clojure)*
+* css *(set to the contents of resources/style.css by default)*
 * email
 * location
 * address
@@ -47,10 +55,10 @@ The following keywords are available on top level:
 
 ### Groups and entries
 
-A key part of a CV are lists of your archievements grouped in different categories. You can add groups to your CV with group keyword. Each group consists of multiple entries:
+A key part of a CV are lists of your archievements grouped in different categories. You can add groups to your CV with group keyword. Each group consists of multiple entries.
 
 ```
-(group-name "Printable group title" 
+(group
   (entry 
     (item "some item")))
 ```
@@ -66,6 +74,16 @@ For your convenience, jobless provides several groups with pre-defined titles.
 (education
   (entry
     (title "Clojure Course")))
+```
+
+You can also define new groups using the `cv-group` macro.
+
+```
+(cv-group "example-group" "Printable Group Title")
+```
+becomes:
+```
+(example-group (entry (email "some@email.nothing")))
 ```
 
 ### Entry
