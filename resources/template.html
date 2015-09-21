@@ -1,0 +1,51 @@
+<html>
+  <head>
+    <title>CV</title>
+    <meta charset="utf-8">
+    <style>
+{{ css }}
+    </style>
+  </head>
+  <body>
+    <h1>{{ cv-name }}</h1>
+    <div class="personal-info">
+      {% if email %}{{ email }}</br>{% endif %}
+      {% if location %}{{ location }}</br>{% endif %}
+      {% if address %}{{ address }}</br>{% endif %}
+      {% if homepage %}<a href="{{ homepage }}">{{ homepage }}</a>{% endif %}
+    </div>
+    <div style="clear:both;"></div>
+
+    {% for group in groups %}
+    <div class="group {{ group.type }}">
+      <h3> {{ group.name }} </h3>
+      {% for item in group.items %}
+      <div class="item">
+        <b class="title">{{ item.title }}</b>
+        {% if item.company %} - {{ item.company }} {% endif %}
+        {% if item.homepage %}
+        <span class="homepage">
+          (<a href="{{ item.homepage }}">{{ item.homepage }}</a>)
+        </span>
+        {% endif %}
+        {% if item.technologies %}<p class="technologies">
+        {{ item.technologies }}
+        </p>{% endif %}
+        {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+        {% if item.bulletins %}
+        <ul>
+          {% for bulletin in item.bulletins %}
+          <li>{{ bulletin }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+        <div class="time-span">
+          {{ item.start-date }}
+          {% if item.end-date %} - {{ item.end-date }} {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+  </body>
+</html>
