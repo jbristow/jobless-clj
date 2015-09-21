@@ -31,7 +31,7 @@ You can see a larger source example [here](https://github.com/jbristow/jobless-c
 
 The following keywords are available on top level:
 
-* name
+* cv-name
 * email
 * location
 * address
