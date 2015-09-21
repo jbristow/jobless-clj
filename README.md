@@ -23,7 +23,7 @@ It generates HTML files, which can be easily converted to PDF format if needed. 
       (end-date "April 2015"))))
 ```
 
-You can see a larger source example [here](https://github.com/jbristow/jobless-clj/blob/master/src/jobless_clj/example.clj) which gets compiled into [this](http://comingsoon.nothing).
+You can see a larger source example [here](https://github.com/jbristow/jobless-clj/blob/master/src/jobless_clj/example.clj) which gets compiled into [this](http://jbristow.github.io/jobless-clj/jbristow.html).
 
 ## Available keywords
 
