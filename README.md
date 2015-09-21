@@ -4,6 +4,14 @@ Jobless is a simple DSL written in Clojure for generating CVs.
 
 It is a complete clojure rewrite of [dabrorious](https://github.com/dabrorius)/[jobless](https://github.com/dabrorius/jobless). If you like it, give him all the credit because I'm just exploring the fact that ruby is pretty much a lisp sometimes.
 
+## Installation
+
+Use clojars:
+
+[![Clojars Project](http://clojars.org/jobless-clj/latest-version.svg)](http://clojars.org/jobless-clj)
+
+## Demonstration
+
 It generates HTML files, which can be easily converted to PDF format if needed. Here's an example of Jobless code.
 
 ```
