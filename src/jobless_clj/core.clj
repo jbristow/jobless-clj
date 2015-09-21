@@ -14,8 +14,6 @@
 (defmacro cv-items [& items]
   `(do ~@(for [n items] `(cv-item ~n))))
 
-
-
 (defmacro cv-group [group-type group-name]
   `(defn ~(symbol group-type) [& args#] 
      (let [items# (map :entry (filter #(some? (:entry %1)) args#))]
@@ -26,15 +24,11 @@
 
 (cv-items "address" "bulletin" "company" "cv-name" "description" "email" "email" 
           "end-date" "homepage" "location" "start-date" "technologies" "title")
+
 (cv-groups ["employment" "Employment"]
            ["education" "Education"]
            ["open-source" "Open Source Projects"]
            ["other-exp" "Other Experience"])
-;(cv-group "employment" "Employment")
-;(cv-group "education" "Education")
-;(cv-group "open-source" "Open Source")
-;(cv-group "other-exp" "Other Experience")
-
 
 (defn entry [& args]
   (let [bulletins (map :bulletin (filter #(some? (:bulletin %1)) args))
