@@ -3,10 +3,12 @@
   (:require
    [selmer.parser :as selmer]))
 
+(def default-css (slurp "resources/style.css"))
+
 (defn cv [& args]
   (let [groups {:groups (map :group (filter #(some? (:group %1)) args))}
         others (into {} (remove #(some? (:group %1)) args))]
-    (selmer/render-file "template.html" (merge others groups))))
+    (selmer/render-file "template.html" (merge {:css default-css} others groups))))
 
 (defmacro cv-item [item] 
   `(defn ~(symbol item) [arg#] {~(keyword item) arg#}))
@@ -22,7 +24,7 @@
 (defmacro cv-groups [& groups]
   `(do ~@(for [n groups] `(cv-group ~(first n) ~(second n)))))
 
-(cv-items "address" "bulletin" "company" "cv-name" "description" "email" "email" 
+(cv-items "address" "bulletin" "company" "css" "cv-name" "description" "email" "email" 
           "end-date" "homepage" "location" "start-date" "technologies" "title")
 
 (cv-groups ["employment" "Employment"]
