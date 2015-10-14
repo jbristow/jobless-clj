@@ -3,38 +3,34 @@
   (:require
    [selmer.parser :as selmer]))
 
+(def default-css (slurp "resources/style.css"))
+
 (defn cv [& args]
   (let [groups {:groups (map :group (filter #(some? (:group %1)) args))}
         others (into {} (remove #(some? (:group %1)) args))]
-    (selmer/render-file "template.html" (merge others groups))))
+    (selmer/render-file "template.html" (merge {:css default-css} others groups))))
 
 (defmacro cv-item [item] 
   `(defn ~(symbol item) [arg#] {~(keyword item) arg#}))
+
+(defmacro cv-items [& items]
+  `(do ~@(for [n items] `(cv-item ~n))))
 
 (defmacro cv-group [group-type group-name]
   `(defn ~(symbol group-type) [& args#] 
      (let [items# (map :entry (filter #(some? (:entry %1)) args#))]
        {:group {:items items# :type ~group-type :name ~group-name}})))
 
+(defmacro cv-groups [& groups]
+  `(do ~@(for [n groups] `(cv-group ~(first n) ~(second n)))))
 
-(cv-group "employment" "Employment")
-(cv-group "education" "Education")
-(cv-group "open-source" "Open Source")
-(cv-group "other-exp" "Other Experience")
+(cv-items "address" "bulletin" "company" "css" "cv-name" "description" "email" "email" 
+          "end-date" "homepage" "location" "start-date" "technologies" "title")
 
-(cv-item "cv-name")
-(cv-item "technologies")
-(cv-item "homepage")
-(cv-item "email")
-(cv-item "title")
-(cv-item "bulletin")
-(cv-item "email")
-(cv-item "location")
-(cv-item "address")
-(cv-item "start-date")
-(cv-item "end-date")
-(cv-item "company")
-(cv-item "description")
+(cv-groups ["employment" "Employment"]
+           ["education" "Education"]
+           ["open-source" "Open Source Projects"]
+           ["other-exp" "Other Experience"])
 
 (defn entry [& args]
   (let [bulletins (map :bulletin (filter #(some? (:bulletin %1)) args))
