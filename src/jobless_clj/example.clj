@@ -13,7 +13,7 @@
      (title "Senior Software Developer")
      (company "Intuit")
      (homepage "http://intuit.com")
-     (technologies "bash, Java, Javascript, clojure, go")
+     (technologies "bash, Java, Javascript, clojure, go, aws")
      (bulletin "Developed RESTful webservice in Java/EC2/RDS to bridge two deployment systems.")
      (bulletin "Maintained and updated clojure webservice.")
      (bulletin "Mentored junior developers on code quality and code review practices.")
@@ -25,7 +25,7 @@
      (title "Senior Software Developer in Quality")
      (company "Intuit")
      (homepage "http://intuit.com")
-     (technologies "bash, Java, Javascript, clojure, go")
+     (technologies "bash, Java, Javascript, clojure, go, aws")
      (bulletin "Developed automation in Java, Javascript, bash, and ruby to capture test scenarios.")
      (bulletin "Assisted developers in refactoring their code for testability and code quality. (And fixed bugs in Java and clojure)")
      (bulletin "Championed code quality tools and metrics gathering.")
@@ -68,6 +68,7 @@
      (bulletin "Created and gave presentations on coding and development.")
      (bulletin "Helped to maintain a \"Code Club\" to expand interest in learning new programming languages.")
      (start-date "July 2009")
+<<<<<<< Updated upstream
      (end-date "August 2010")))
    (education
     (entry
@@ -87,3 +88,59 @@
     (entry
      (title "StackOverflow")
      (homepage "http://stackoverflow.com/users/113332/jbristow")))))
+=======
+     (end-date "August 2010"))
+    (entry
+     (title "Software Engineer")
+     (company "TraceSecurity, Inc.")
+     (technologies "Java, jsp, jboss, Javascript")
+     (bulletin "Designed and developed applications in Java/JSP/SQL for a Struts/JBOSS focused system.")
+     (bulletin "Maintained and created existing servlets, JSP pages, and xml pages.")
+     (bulletin "Improved user experience with AJAX and the jQuery JavaScript framework.")
+     (bulletin "Helped to develop processes for a growing Software Engineering department.")
+     (bulletin "Oversaw the training of other engineers on code management with SVN. (Merging/Best practices)")
+     (start-date "September 2007")
+     (end-date "July 2009"))
+    (entry
+     (title "Software Engineer")
+     (company "Emn8, Inc.")
+     (technologies "Java, xml, xslt")
+     (bulletin "Created and maintained 3-tiered enterprise applications to define, enforce, and streamline workflow and data entry. Coding was done in Java on the Tomcat server using a custom framework that used XML/XSLT as the primary output.")
+     (bulletin "Oversaw and automated the creation of DML and INI files for field installations.")
+     (bulletin "Worked in a team environment on multiple projects at once.")
+     (bulletin "Developed and implemented solutions based on non-technical user specifications.")
+     (bulletin "Integrated existing Java code into new solutions.")
+     (start-date "July 2006")
+     (end-date "August 2007"))
+    (entry
+     (title "Webmaster")
+     (company "MARCOA Publishing, Inc.")
+     (technologies "Java, php, XML, XSLT, bash, linux")
+     (bulletin "Created and maintained Struts/J2EE applications (http://www.marcoarealestate.com)")
+     (bulletin "Redesigned and maintained the company's internal portal in PHP.")
+     (bulletin "Oversaw and trained others on windows desktop support.")
+     (bulletin "Maintained web servers in Red Hat Enterprise and Fedora Core Linux")
+     (bulletin "Maintained and built a basic Active Directory layout")
+     (bulletin "Kept statistical tracking and analysis of website usage and database searches.")
+     (bulletin "XML and XSLT development for data recording and display.")
+     (start-date "July 2004")
+     (end-date "July 2006")))
+  (education
+   (entry
+    (title "B.A. Computer Science")
+    (company "University of California, San Diego")
+    (start-date "2000")
+    (end-date "2004")))
+  (other-exp
+   (entry
+    (title "JokeBot")
+    (homepage "https://github.com/jbristow/JokeBot")
+    (description "Silly fortune file markov chain generator."))
+   (entry
+    (title "bgg-shelve")
+    (homepage "https://github.com/jbristow/bgg-shelve")
+    (description "Naiively optimizes your board games on a shelf."))
+   (entry
+    (title "StackOverflow")
+    (homepage "http://stackoverflow.com/users/113332/jbristow")))))
+>>>>>>> Stashed changes
