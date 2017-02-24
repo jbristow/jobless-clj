@@ -68,7 +68,6 @@
      (bulletin "Created and gave presentations on coding and development.")
      (bulletin "Helped to maintain a \"Code Club\" to expand interest in learning new programming languages.")
      (start-date "July 2009")
-<<<<<<< Updated upstream
      (end-date "August 2010")))
    (education
     (entry
@@ -88,7 +87,6 @@
     (entry
      (title "StackOverflow")
      (homepage "http://stackoverflow.com/users/113332/jbristow")))))
-=======
      (end-date "August 2010"))
     (entry
      (title "Software Engineer")
@@ -143,4 +141,3 @@
    (entry
     (title "StackOverflow")
     (homepage "http://stackoverflow.com/users/113332/jbristow")))))
->>>>>>> Stashed changes
