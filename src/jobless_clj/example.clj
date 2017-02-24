@@ -68,25 +68,6 @@
      (bulletin "Created and gave presentations on coding and development.")
      (bulletin "Helped to maintain a \"Code Club\" to expand interest in learning new programming languages.")
      (start-date "July 2009")
-     (end-date "August 2010")))
-   (education
-    (entry
-     (title "B.A. Computer Science")
-     (company "University of California, San Diego")
-     (start-date "2000")
-     (end-date "2004")))
-   (other-exp
-    (entry
-     (title "JokeBot")
-     (homepage "https://github.com/jbristow/JokeBot")
-     (description "Silly fortune file markov chain generator."))
-    (entry
-     (title "bgg-shelve")
-     (homepage "https://github.com/jbristow/bgg-shelve")
-     (description "Naiively optimizes your board games on a shelf."))
-    (entry
-     (title "StackOverflow")
-     (homepage "http://stackoverflow.com/users/113332/jbristow")))))
      (end-date "August 2010"))
     (entry
      (title "Software Engineer")
