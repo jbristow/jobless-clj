@@ -12,10 +12,10 @@
         others (into {} (remove #(some? (:group %)) args))]
     (selmer/render-file "template.html" (merge {:css default-css} others groups))))
 
-(defmacro cv-item 
+(defmacro cv-item
   "Defines a function for a cv bullet point."
-  [item] 
-  `(defn ~(symbol item) [arg#] 
+  [item]
+  `(defn ~(symbol item) [arg#]
      {~(keyword item) arg#}))
 
 (defmacro cv-items
@@ -23,34 +23,34 @@
   [& items]
   `(do ~@(for [n items] `(cv-item ~n))))
 
-(defmacro cv-group 
+(defmacro cv-group
   "Defines a function for a cv grouping."
   [group-type group-name]
-  `(defn ~(symbol group-type) [& args#] 
+  `(defn ~(symbol group-type) [& args#]
      (let [items# (map :entry (filter #(some? (:entry %)) args#))]
        {:group {:items items# :type ~group-type :name ~group-name}})))
 
-(defmacro cv-groups 
+(defmacro cv-groups
   "Takes a list of group-name/group-title and applies the cv-group macro to each."
   [& groups]
   `(do ~@(for [n groups] `(cv-group ~(first n) ~(second n)))))
 
-(cv-items 
- "address" 
- "bulletin" 
- "company" 
- "css" 
- "cv-name" 
- "description" 
- "email" 
- "end-date" 
- "homepage" 
- "location" 
- "start-date" 
- "technologies" 
+(cv-items
+ "address"
+ "bulletin"
+ "company"
+ "css"
+ "cv-name"
+ "description"
+ "email"
+ "end-date"
+ "homepage"
+ "location"
+ "start-date"
+ "technologies"
  "title")
 
-(cv-groups 
+(cv-groups
  ["employment" "Employment"]
  ["education" "Education"]
  ["open-source" "Open Source Projects"]
@@ -59,7 +59,7 @@
 (defn entry [& args]
   (let [bulletins (map :bulletin (filter #(some? (:bulletin %)) args))
         others (into {} (remove #(some? (:bulletin %)) args))]
-    (if (zero? (count bulletins)) 
+    (if (zero? (count bulletins))
       {:entry others}
       {:entry (merge others {:bulletins bulletins})})))
 
