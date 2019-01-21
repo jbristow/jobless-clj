@@ -10,6 +10,17 @@
    (homepage "http://jondotcomdotorg.net")
    (employment
     (entry
+     (title "Senior DevSecOps Engineer")
+     (company "Intuit")
+     (homepage "http://intuit.com")
+     (technologies "bash, Kotlin, JavaScript, go, python, aws, gcp, ruby, graph databases")
+     (bulletin "Designed and began development of a red-team/exploit platform in AWS Lambda using Neptune and Kotlin.")
+     (bulletin "Mentored ops heavy and new career devs on testing, interacting with data models, and how to move towards continuous deployment.")
+     (bulletin "Analyzed large datasets in BigQuery using Data Studio")
+     (bulletin "Verified vulnerability tickets and did rudimentary red-team work to gauge the severity of exposure.")
+     (start-date "July 2018")
+     (end-date "Present"))
+    (entry
      (title "Senior Cloud Software Engineer")
      (company "Teradata")
      (homepage "http://teradata.com")
@@ -20,7 +31,7 @@
      (bulletin "General sysadmin work: AWS, Azure, Windows")
      (bulletin "Mentored ops-heavy devs in testing and software development. (Through code reviews in github, design meetings, and pair programming.)")
      (start-date "March 2017")
-     (end-date "current"))
+     (end-date "July 2018"))
     (entry
      (title "Senior Software Developer")
      (company "Intuit")
