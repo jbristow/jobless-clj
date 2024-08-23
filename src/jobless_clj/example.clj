@@ -24,7 +24,7 @@
     (entry
      (title "Staff DevSecOps Engineer")
      (company "Intuit")
-     (homepage "http://intuit.com")
+     (homepage "https://intuit.com")
      (technologies "bash, Kotlin, JavaScript, go, python, aws, gcp, ruby, graph databases, jupyter")
      (bulletin "Designed and began development of a red-team/exploit platform in AWS Lambda using Neptune and Kotlin.")
      (bulletin "Mentored ops heavy and new career devs on testing, interacting with data models, and how to move towards continuous deployment.")
