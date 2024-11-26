@@ -9,6 +9,7 @@ It is a complete clojure rewrite of [dabrorious](https://github.com/dabrorius)/[
 Use clojars to pull it in via Leiningen dependencies:
 
 [![Clojars Project](http://clojars.org/jobless-clj/latest-version.svg)](http://clojars.org/jobless-clj)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjbristow%2Fjobless-clj.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjbristow%2Fjobless-clj?ref=badge_shield)
 
 then include it in your clj:
 
@@ -99,3 +100,7 @@ An entry is an element of an entry in a group. The title of an open source proje
 * end_date
 
 They can also have multiple `bulletin` elements, each of which will be rendered as one bulleted item in a list.
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjbristow%2Fjobless-clj.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjbristow%2Fjobless-clj?ref=badge_large)
